@@ -97,6 +97,24 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "DevBox",
+      href: "https://github.com/harshau007/devbox-desktop",
+      dates: "May 2024 - Present",
+      active: true,
+      description:
+        "DevBox is a powerful tool to create and manage isolated containers for developers with their desired technology stacks or Database, such as Node.js, Python, Rust, Mongo, Postgres and more.",
+      technologies: ["Go", "Docker", "Wails Framework"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/harshau007/devbox-desktop",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/DevBox.gif",
+      video: "",
+    },
+    {
       title: "ALG Welcome",
       href: "https://github.com/arch-linux-gui/alg-welcome",
       dates: "April 2024 - Present",
@@ -134,7 +152,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/algwebsite.png",
+      image: "/alg-web.gif",
       video: "",
     },
     {
@@ -166,24 +184,6 @@ export const DATA = {
       ],
       image: "/tcetlinux.png",
       // video: "https://cdn.magicui.design/bento-grid.mp4",
-    },
-    {
-      title: "DevBox",
-      href: "https://github.com/harshau007/devbox",
-      dates: "April 2024 - July 2024",
-      active: true,
-      description:
-        "DevBox is a powerful CLI tool to create and manage isolated containers for developers with their desired technology stacks, such as Node.js, Python, Rust, and more.",
-      technologies: ["Go", "Docker", "Cobra CLI", "Bubbletea"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/harshau007/devbox",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/devbox.png",
-      // video: "https://cdn.llm.report/openai-demo.mp4",
     },
   ],
   hackathons: [

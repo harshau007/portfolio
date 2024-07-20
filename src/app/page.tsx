@@ -1,4 +1,3 @@
-import Github from "@/components/github";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -151,35 +150,6 @@ export default function Page() {
               </BlurFade>
             ))}
           </div>
-        </div>
-      </section>
-      <section id="github">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  GitHub
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  GitHub Contributions
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  My GitHub activity reflects my passion for building and
-                  contributing to various projects. Here's a glimpse of my
-                  GitHub contributions, showcasing my dedication and continuous
-                  effort in software development.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4">
-              <BlurFade delay={BLUR_FADE_DELAY * 15}>
-                <Github />
-              </BlurFade>
-            </ul>
-          </BlurFade>
         </div>
       </section>
       <section id="hackathons">
