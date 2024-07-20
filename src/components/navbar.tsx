@@ -57,7 +57,7 @@ export default function Navbar() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="https://drive.google.com/file/d/16Y0tPyEl1HqvEglzV6RBY-HGKIkqFQGY/view?usp=sharing"
+                href="https://rose-billye-66.tiiny.site/"
                 target="_blank"
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "icon" }),
