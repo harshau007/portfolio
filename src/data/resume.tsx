@@ -103,7 +103,14 @@ export const DATA = {
       active: true,
       description:
         "DevBox is a powerful tool to create and manage isolated containers for developers with their desired technology stacks or Database, such as Node.js, Python, Rust, Mongo, Postgres and more.",
-      technologies: ["Go", "Docker", "Wails Framework"],
+      technologies: [
+        "Go",
+        "Docker",
+        "Wails Framework",
+        "ReactJs",
+        "TailwindCSS",
+        "Shadcn",
+      ],
       links: [
         {
           type: "Source",
@@ -234,7 +241,7 @@ export const DATA = {
           href: "https://devpost.com/software/space-info-r9tpv5",
         },
         {
-          title: "Source",
+          title: "Github",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/harshau007/SKYNET-HACKATHON-PROJECT",
         },
