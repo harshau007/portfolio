@@ -3,9 +3,9 @@ import { Icons } from "@/components/icons";
 export const DATA = {
   name: "Harsh Upadhyay",
   initials: "HU",
-  url: "https://dillion.io",
+  url: "https://harshupadhyay.vercel.app",
   location: "Mumbai, IN",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  locationLink: "https://www.google.com/maps/place/mumbai",
   description:
     "Third-year Computer Science Engineering student building ALG, passionate about coding, and constantly exploring new technologies. Active on GitHub and always eager to learn and share knowledge.",
   summary:
