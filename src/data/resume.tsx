@@ -27,6 +27,7 @@ export const DATA = {
     "Docker",
     "Kubernetes",
     "Java",
+    "Spring Boot",
   ],
   contact: {
     email: "upadhyayharsh533@gmail.com",
@@ -55,7 +56,7 @@ export const DATA = {
       location: "Mumbai, IN",
       title: "Core Team - Developer",
       logoUrl: "/alg.png",
-      start: "Mar 2024",
+      start: "April 2024",
       end: "Present",
       description:
         "Developed a user-friendly Welcome application for Arka Linux GUI to aid users in navigating Arch-based Linux distributions efficiently, revamped the ALG website to enhance its design and functionality for a more engaging user experience, and contributed as a core team member, driving innovation and user-focused improvements for Arch Linux GUI.",
@@ -68,7 +69,7 @@ export const DATA = {
       title: "Production Engineer (Team Lead)",
       logoUrl: "/tcetOpensource.png",
       start: "July 2023",
-      end: "Mar 2024",
+      end: "April 2024",
       description:
         "Collaborated with the development team to establish automated daily unit tests, streamline bug identification and resolution processes, spearheaded the adoption of continuous integration and deployment practices, resulting in a 25% reduction in delivery time and a decrease in production defects, and played a key role in enhancing application performance, leading to improved response times and infrastructure scalability.",
     },

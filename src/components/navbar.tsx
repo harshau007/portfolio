@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
-import { HomeIcon, NotebookIcon, File } from "lucide-react";
+import { File, HomeIcon, NotebookIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -57,7 +57,7 @@ export default function Navbar() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="https://rose-billye-66.tiiny.site/"
+                href="https://harshs-resume.tiiny.site/Resume.pdf"
                 target="_blank"
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "icon" }),
