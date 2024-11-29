@@ -1,3 +1,4 @@
+import Github from "@/components/github";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -6,6 +7,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { getSkillIcon } from "@/lib/utils";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -102,12 +104,39 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Object.entries(DATA.skills).map(
+              ([category, skills], categoryIndex) => (
+                <BlurFade
+                  key={category}
+                  delay={BLUR_FADE_DELAY * 10 + categoryIndex * 0.05}
+                >
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold">{category}</h3>
+                    <div className="flex flex-wrap gap-1">
+                      {skills.map((skill, skillIndex) => {
+                        const SkillIcon = getSkillIcon(skill);
+                        return (
+                          <BlurFade
+                            key={skill}
+                            delay={BLUR_FADE_DELAY * 11 + skillIndex * 0.02}
+                          >
+                            <li className="flex items-center gap-2">
+                              <Badge>
+                                {SkillIcon && (
+                                  <SkillIcon className="text-lg rounded mr-2" />
+                                )}
+                                {skill}
+                              </Badge>
+                            </li>
+                          </BlurFade>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </BlurFade>
+              )
+            )}
           </div>
         </div>
       </section>
@@ -152,9 +181,32 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
+      <section id="github">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <div className="flex flex-col pb-8 items-center justify-center space-y-5 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  GitHub Activity
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
+                  My Open Source Contributions
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  I&apos;m passionate about open source and regularly contribute
+                  to various projects. Below you can see my GitHub activity,
+                  showcasing my commitment to collaborative development and
+                  continuous learning in the world of software engineering.
+                </p>
+              </div>
+            </div>
+            <Github />
+          </BlurFade>
+        </div>
+      </section>
+      <section id="hackathons">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -174,7 +226,7 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {DATA.hackathons.map((project, id) => (
                 <BlurFade

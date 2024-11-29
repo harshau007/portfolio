@@ -70,7 +70,7 @@ export function ResumeViewer({
           )}
         </div>
         <div
-          className="absolute p-5 bottom-4 right-4 group"
+          className="absolute p-5 bottom-4 right-4 group hidden sm:block"
           role="button"
           onClick={handleDownload}
           onKeyDown={(e) => e.key === "Enter" && handleDownload()}

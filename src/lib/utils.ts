@@ -1,5 +1,33 @@
 import { type ClassValue, clsx } from "clsx";
 import { unstable_noStore as noStore } from "next/cache";
+import { type IconType } from "react-icons";
+import { BiLogoSpringBoot } from "react-icons/bi";
+import {
+  FaAws,
+  FaDocker,
+  FaGit,
+  FaJava,
+  FaLinux,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
+import {
+  SiCircleci,
+  SiExpress,
+  SiGithubactions,
+  SiGoland,
+  SiJavascript,
+  SiKubernetes,
+  SiMongodb,
+  SiNestjs,
+  SiPostgresql,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { VscAzure } from "react-icons/vsc";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -36,4 +64,35 @@ export function formatDate(date: string) {
     const yearsAgo = Math.floor(daysAgo / 365);
     return `${fullDate} (${yearsAgo}y ago)`;
   }
+}
+
+export function getSkillIcon(skill: string): IconType | null {
+  const icons: Record<string, IconType> = {
+    React: FaReact,
+    "Next.js": TbBrandNextjs,
+    JavaScript: SiJavascript,
+    TypeScript: SiTypescript,
+    "Node.js": FaNodeJs,
+    Linux: FaLinux,
+    Git: FaGit,
+    Express: SiExpress,
+    NestJS: SiNestjs,
+    Python: FaPython,
+    Go: FaGolang,
+    MongoDB: SiMongodb,
+    PostgreSQL: SiPostgresql,
+    Docker: FaDocker,
+    Kubernetes: SiKubernetes,
+    Java: FaJava,
+    "Spring Boot": BiLogoSpringBoot,
+    CircleCI: SiCircleci,
+    "Gin-Gonic": SiGoland,
+    "Go-Fiber": SiGoland,
+    AWS: FaAws,
+    Azure: VscAzure,
+    "GitHub Actions": SiGithubactions,
+    TailwindCSS: SiTailwindcss,
+  };
+
+  return icons[skill] || null;
 }

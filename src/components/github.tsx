@@ -1,7 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import ActivityCalendar from "react-activity-calendar";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import ActivityCalendar from "react-activity-calendar";
 import GithubContributions from "./contribution";
 
 const Github = () => {
@@ -50,46 +52,51 @@ const Github = () => {
   };
 
   return (
-    <>
-      <div className="flex items-center mt-8">
-        <div className="w-full max-w-sm mx-auto md:max-w-xl lg:max-w-none lg:pl-10">
+    <div className="space-y-6">
+      <div className="flex items-center justify-center">
+        <div className="w-full max-w-sm mx-auto md:max-w-xl lg:max-w-none">
           {activityData.length > 0 ? (
             <ActivityCalendar
               colorScheme={theme === "light" ? "light" : "dark"}
               theme={{
-                light: ["#deddda", "#9be9a8", "#40c463", "#30a14e", "#216e39"], // Background, low activity, moderate activity, high activity, text
-                dark: ["#ffffff", "#9be9a8", "#40c463", "#30a14e", "#216e39"], // Background, low activity, moderate activity, high activity, text
+                light: ["#f0f0f0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+                dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
               }}
               data={activityData}
               showWeekdayLabels
-              blockSize={14}
-              blockRadius={4}
-              blockMargin={6}
-              fontSize={16}
+              blockSize={12}
+              blockRadius={2}
+              blockMargin={4}
+              fontSize={14}
+              hideColorLegend
+              hideMonthLabels
             />
           ) : (
             <ActivityCalendar data={[]} loading />
           )}
         </div>
       </div>
-      <div className="flex justify-center mt-4 space-x-4">
-        <button
-          className="px-4 py-2 bg-[#1f2021] text-white px-7 py-3 rounded-full enabled:hover:scale-105 enabled:hover:bg-[#323436] enabled:transition disabled:cursor-not-allowed disabled:bg-[#4d4d4d]"
+      <div className="flex justify-center space-x-4">
+        <Button
+          variant="outline"
+          size="icon"
           onClick={decreaseYear}
-          disabled={currYear == 2019}
+          disabled={currYear === 2019}
         >
-          &lt;-
-        </button>
-        <button
-          className="px-4 py-2 bg-[#1f2021] text-white px-7 py-3 rounded-full enabled:hover:scale-105 enabled:hover:bg-[#323436] enabled:transition disabled:cursor-not-allowed disabled:bg-[#4d4d4d]"
+          <ChevronLeft className="h-4 w-4" />
+        </Button>
+        <span className="flex items-center font-medium">{currYear}</span>
+        <Button
+          variant="outline"
+          size="icon"
           onClick={increaseYear}
           disabled={currYear === new Date().getFullYear()}
         >
-          -&gt;
-        </button>
+          <ChevronRight className="h-4 w-4" />
+        </Button>
       </div>
       <GithubContributions />
-    </>
+    </div>
   );
 };
 
