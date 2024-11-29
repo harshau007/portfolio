@@ -9,8 +9,9 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
-import { File, HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon } from "lucide-react";
 import Link from "next/link";
+import { ResumeViewer } from "./resume-viewer";
 
 export default function Navbar() {
   return (
@@ -56,16 +57,23 @@ export default function Navbar() {
         <DockIcon>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Link
-                href="https://harshs-resume.tiiny.site/Resume.pdf"
-                target="_blank"
+              <div
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "icon" }),
                   "size-12"
                 )}
               >
-                <File className="size-4" />
-              </Link>
+                <ResumeViewer
+                  title=""
+                  description=""
+                  filePath="/Resume.pdf"
+                  fileType="pdf"
+                  pdfOptions={{
+                    showPrintButton: true,
+                    showFullscreenButton: true,
+                  }}
+                />
+              </div>
             </TooltipTrigger>
             <TooltipContent>
               <p>Resume</p>
