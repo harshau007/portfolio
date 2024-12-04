@@ -7,9 +7,9 @@ export const DATA = {
   location: "Mumbai, IN",
   locationLink: "https://www.google.com/maps/place/mumbai",
   description:
-    "Third-year Computer Science Engineering student building ALG, passionate about coding, and constantly exploring new technologies. Active on GitHub and always eager to learn and share knowledge.",
+    "Third-year Computer Science Engineering student passionate about coding, backend development, and exploring new technologies. Active on GitHub and eager to learn and share knowledge.",
   summary:
-    "At the end of my second year in university, I started building and contributing to open-source projects like [Arka Linux GUI ( prev. Arch Linux GUI )](https://github.com/arch-linux-gui). While pursuing my Computer Science Engineering degree at [Thakur College Of Engineering and Technology](/#education), I developed a welcome application for ALG using Golang, React, and TailwindCSS. As a GDSC TCET leader, I organized workshops to enhance technical skills within the community. Passionate about backend development and devops engineering, I'm always eager to learn, share knowledge, and contribute to meaningful tech solutions.",
+    "As a third-year Computer Science Engineering student at [Thakur College of Engineering and Technology](/#education), I contribute to open-source projects like [Arka Linux GUI (prev. Arch Linux GUI)](https://github.com/arch-linux-gui) and develop applications such as ALG's welcome app using Golang, React, and TailwindCSS. As the GDSC TCET leader, I organized workshops to enhance technical skills within the community. With a strong interest in backend development and DevOps engineering, I strive to learn, innovate, and contribute to impactful tech solutions.",
   avatarUrl: "/me.jpeg",
   skills: {
     Languages: ["JavaScript", "TypeScript", "Python", "Go", "Java"],
@@ -44,45 +44,106 @@ export const DATA = {
       },
     },
   },
-
-  work: [
-    {
-      company: "Arka Linux GUI",
-      href: "https://github.com/arch-linux-gui",
-      badges: [],
-      location: "Mumbai, IN",
-      title: "Core Team - Developer",
-      logoUrl: "/alg.png",
-      start: "April 2024",
-      end: "Present",
-      description:
-        "Developed a user-friendly Welcome application for Arka Linux GUI to aid users in navigating Arch-based Linux distributions efficiently, revamped the ALG website to enhance its design and functionality for a more engaging user experience, and contributed as a core team member, driving innovation and user-focused improvements for Arch Linux GUI.",
-    },
-    {
-      company: "TCET-Opensource",
-      badges: [],
-      href: "https://opensource.tcetmumbai.in",
-      location: "Mumbai, IN",
-      title: "Production Engineer (Team Lead)",
-      logoUrl: "/tcetOpensource.png",
-      start: "July 2023",
-      end: "April 2024",
-      description:
-        "Collaborated with the development team to establish automated daily unit tests, streamline bug identification and resolution processes, spearheaded the adoption of continuous integration and deployment practices, resulting in a 25% reduction in delivery time and a decrease in production defects, and played a key role in enhancing application performance, leading to improved response times and infrastructure scalability.",
-    },
-    {
-      company: "TCET Shastra Coding Club",
-      href: "https://www.linkedin.com/company/tcet-shastra-coding-club",
-      badges: [],
-      location: "Mumbai, IN",
-      title: "Problem Tester",
-      logoUrl: "/tcetShastra.jpg",
-      start: "November 2022",
-      end: "July 2023",
-      description:
-        "Tested coding problems, and created comprehensive solution videos for TCET-Shastra, ensuring high-quality educational content and robust problem-solving experiences for users.",
-    },
-  ],
+  experience: {
+    work: [
+      {
+        company: "Hireintel.ai",
+        badges: ["Go", "Go-Gonic", "MongoDB", "SendGrid", "AWS EC2", "Nginx"],
+        href: "https://hireintel.ai",
+        location: "Mumbai, IN",
+        title: "Golang Developer Intern",
+        logoUrl: "/hireintel.webp",
+        start: "November 2024",
+        end: "Present",
+        description: [
+          "Developed a robust backend system using Golang and Gin-Gonic on a modular monolithic architecture, improving system scalability and maintainability, and reducing response time by 30%.",
+          "Implemented an automated emailing service using SendGrid, increasing user engagement by 20% through effective communication workflows.",
+          "Deployed the application on AWS EC2 with Nginx as a reverse proxy, ensuring 99.9% uptime, and collaborated with the frontend team to resolve bugs, reducing reported issues by 15%.",
+        ],
+      },
+      {
+        company: "TCET-Opensource",
+        badges: [
+          "Linux",
+          "Git",
+          "GitHub Action",
+          "Docker",
+          "Kubernetes",
+          "AWS EKS",
+        ],
+        href: "https://opensource.tcetmumbai.in",
+        location: "Mumbai, IN",
+        title: "Production Engineer (Team Lead)",
+        logoUrl: "/tcetOpensource.png",
+        start: "July 2023",
+        end: "April 2024",
+        description: [
+          "Implemented an automated daily unit testing service for a product in development, reducing the time required for bug identification and fixing by team members.",
+          "Streamlined the software delivery lifecycle by introducing continuous integration and deployment (CI/CD), resulting in a 25% reduction in delivery time and fewer production defects.",
+          "Optimized application performance and infrastructure scalability, achieving significant improvements in response time and overall system efficiency.",
+        ],
+      },
+      // {
+      //   company: "TCET Shastra Coding Club",
+      //   href: "https://www.linkedin.com/company/tcet-shastra-coding-club",
+      //   badges: [],
+      //   location: "Mumbai, IN",
+      //   title: "Problem Tester",
+      //   logoUrl: "/tcetShastra.jpg",
+      //   start: "November 2022",
+      //   end: "July 2023",
+      //   description: [
+      //     "Developed a comprehensive Welcome Application using the Wails framework, integrating Golang and React, enabling seamless system-level communication and providing a modern UI for Arka Linux",
+      //     "Implemented essential features in the Welcome Application, including system updates, mirrorlist management, and theme customization, significantly improving the user onboarding experience and system flexibility",
+      //     "Redesigned and maintained the Arka Linux GUI website using Next.js and TailwindCSS, enhancing user navigation, accessibility, and overall aesthetics",
+      //   ],
+      // },
+    ],
+    opensource: [
+      {
+        company: "Arka Linux GUI",
+        href: "https://github.com/arch-linux-gui",
+        badges: [
+          "Linux",
+          "Bash",
+          "Git",
+          "Go",
+          "ReactJs",
+          "NextJs",
+          "TailwindCSS",
+        ],
+        location: "Mumbai, IN",
+        title: "Developer & Maintainer",
+        logoUrl: "/alg.png",
+        start: "April 2024",
+        end: "Present",
+        description: [
+          "Developed a comprehensive Welcome Application using the Wails framework, integrating Golang and React, enabling seamless system-level communication and providing a modern UI for Arka Linux",
+          "Implemented essential features in the Welcome Application, including system updates, mirrorlist management, and theme customization, significantly improving the user onboarding experience and system flexibility",
+          "Redesigned and maintained the Arka Linux GUI website using Next.js and TailwindCSS, enhancing user navigation, accessibility, and overall aesthetics",
+        ],
+      },
+      {
+        company: "GDSC TCET",
+        href: "https://tcet-opensource.github.io/gdsc-website",
+        badges: [
+          "Team management",
+          "Mentoring",
+          "Workshop facilitation",
+          "GCP",
+        ],
+        location: "Mumbai, IN",
+        title: "Google Cloud Study Jam Facilitator",
+        logoUrl: "/gdsctcet.jpg",
+        start: "September 2023",
+        end: "April 2024",
+        description: [
+          "Managed a group of 150 students in Google Cloud Study Jam, implementing effective program delivery strategies, resulting in high engagement and completion rates.",
+          "Organized and conducted technical workshops and events, focusing on enhancing skills within the community, leading to improved technical knowledge and participation.",
+        ],
+      },
+    ],
+  },
   education: [
     {
       school: "Thakur College Of Engineering and Technology",
