@@ -256,7 +256,7 @@ export const DATA = {
     {
       title: "Ace Of Hacks",
       dates: "March 30th - 31st, 2024",
-      location: "Mumbai, In",
+      location: "Mumbai, IN",
       description:
         "A Docker monitoring web application that provides real-time insights into container performance and resource usage.",
       image:
@@ -272,7 +272,7 @@ export const DATA = {
     {
       title: "Hackniche 2.0",
       dates: "February 17th - 18th, 2024",
-      location: "Mumbai, In",
+      location: "Mumbai, IN",
       description:
         "Developed a web application which helps students to find housing near their colleges.",
       image:
@@ -288,7 +288,7 @@ export const DATA = {
     {
       title: "Skynet Hacks",
       dates: "October 29, 2021",
-      location: "Kingston, Ontario",
+      location: "Ontario, CA",
       description:
         "Developed a website that provides comprehensive details and updates about the James Webb Space Telescope, offering users an in-depth look at its missions and discoveries.",
       image:
